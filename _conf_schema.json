@@ -1,0 +1,28 @@
+{
+  "base_url": {
+    "type": "string",
+    "description": "已确认的 Z-Library 站点根地址",
+    "default": "https://z-library.sk"
+  },
+  "download_directory": {
+    "type": "string",
+    "description": "下载路径：必须是容器可访问的已挂载目录",
+    "default": "/AstrBot/data/books"
+  },
+  "corpus_directory": {
+    "type": "string",
+    "description": "章节原文映射目录，兼容旧章节知识检索",
+    "default": "/AstrBot/data/knowledge_base/chapter_sources"
+  },
+  "max_download_mb": {
+    "type": "int",
+    "description": "单本最大下载体积MB",
+    "default": 512
+  },
+  "ocr_provider_id": {
+    "type": "string",
+    "description": "扫描页OCR视觉模型（会产生模型调用）",
+    "default": "",
+    "_special": "select_provider"
+  }
+}

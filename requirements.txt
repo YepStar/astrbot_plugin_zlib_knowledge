@@ -1,0 +1,7 @@
+aiohttp>=3.9
+pypdf>=5
+beautifulsoup4>=4.12
+PyMuPDF>=1.24
+fonttools>=4.40
+playwright>=1.55
+Pillow>=10

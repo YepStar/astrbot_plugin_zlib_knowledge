@@ -1,0 +1,7 @@
+name: astrbot_plugin_zlib_knowledge
+display_name: z-lib下载-导入知识库
+desc: 官网浏览器登录自动保存会话、搜书下载、本地书架、只读历史、章节清洗导入与检索；兼容自然意图路由。
+version: 0.4.2
+author: YepStar
+astrbot_version: ">=4.29.1,<5"
+repo: https://github.com/YepStar/astrbot_plugin_zlib_knowledge
