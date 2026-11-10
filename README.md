@@ -24,4 +24,6 @@
 - [网易云音乐](https://github.com/YepStar/astrbot_plugin_netease_browser)：找歌、分享歌曲和一起听。
 - [自然意图分析](https://github.com/YepStar/astrbot_plugin_intent_bridge)：把自然语言变成已接入功能的指令调用。
 
+- [第三方平台](https://github.com/YepStar/astrbot_plugin_third_party_platforms)：统一安排 B站、小黑盒等平台的浏览、互动与分享。
+
 [详细使用说明与技术参考](docs/使用与技术参考.md)
