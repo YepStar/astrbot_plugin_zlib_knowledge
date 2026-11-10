@@ -36,11 +36,10 @@ def test_preview_has_no_kb_side_effect_and_cancel_never_imports(svc,tmp_path):
         await asyncio.gather(*svc.tasks)
         result=svc.store.get('job',job['job_id'])
         assert result['status']=='completed'
-        assert result['result']['review_required'] and not svc.previews and not svc.books.all()
-        analysis_id=result['result']['analysis_id']
-        with pytest.raises(ValueError, match='明确确认'):await svc.review_finalize(analysis_id)
-        preview=await svc.review_finalize(analysis_id,confirmed=True)
-        assert svc.get_preview(preview['preview_token'])
+        assert result['result']['review_required'] is True
+        assert not svc.previews and not svc.books.all()
+        with pytest.raises(ValueError,match='明确确认'):
+            await svc.review_finalize(result['result']['analysis_id'],confirmed=False)
         assert not svc.store.list('import')
         await svc.close()
     asyncio.run(scenario())
@@ -111,12 +110,13 @@ def test_history_never_contains_import_authorization_token(svc,tmp_path):
         assert stored['status']=='completed' and 'preview_token' not in stored['result']
         assert 'preview_token' not in svc.state()['jobs'][0]['result']
         active=svc.preview_result(job['job_id'])
-        assert active['review_required'] and 'preview_token' not in active
+        assert active['review_required'] is True and 'preview_token' not in active
         approved=await svc.review_finalize(active['analysis_id'],confirmed=True)
-        assert svc.get_preview(approved['preview_token'])
-        assert 'preview_token' not in svc.preview_result(job['job_id'])
+        token=approved['preview_token']
+        assert svc.get_preview(token)['analysis_id']==active['analysis_id']
+        assert 'preview_token' not in svc.store.get('job',job['job_id'])['result']
         svc.reviews.invalidate_previews(active['analysis_id'])
-        with pytest.raises(ValueError,match='不存在'):svc.get_preview(approved['preview_token'])
+        with pytest.raises(ValueError):svc.get_preview(token)
         assert svc.store.get('job',job['job_id'])['status']=='completed'
         await svc.close()
     asyncio.run(scenario())

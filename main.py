@@ -83,8 +83,8 @@ class ZlibKnowledge(Star):
     @filter.command('书库面板')
     @filter.permission_type(filter.PermissionType.ADMIN)
     async def panel(self,event: AstrMessageEvent):
-        """打开z-lib下载-导入知识库管理页面的指引。登录、格式选择、目录设置及最终入库确认在面板完成。"""
-        yield event.plain_result('AstrBot → 插件 → z-lib下载-导入知识库 → 书籍管理。登录、搜索下载、本地书架和入库确认都在该页面。')
+        """打开书籍管理适配器管理页面的指引。登录、格式选择、目录设置及最终入库确认在面板完成。"""
+        yield event.plain_result('AstrBot → 插件 → 书籍管理适配器 → 书籍管理。登录、搜索下载、本地书架和入库确认都在该页面。')
 
     async def read(self,event,chapter='',book='',part=1):
         session=await sp.session_get(event.unified_msg_origin,'kb_config',default={})

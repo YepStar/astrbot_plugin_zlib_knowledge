@@ -1,0 +1,11 @@
+/* YepStar adapter series · shared light palette */
+:root,html[data-theme="dark"]{color-scheme:light;--bg:#f5f6fa;--card:#fff;--panel:#fff;--surface:#fff;--text:#242735;--ink:#242735;--muted:#6e7485;--line:#e7e9f0;--accent:#5956d6;--green:#5956d6;--soft:#eeedff;--wash:#eeedff;--good:#25775a;--danger:#b84252}
+body{background:var(--bg);color:var(--text)}
+.adapter-series-brand{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:10px;font-weight:750;letter-spacing:1.5px;margin:0 0 9px;line-height:1.6}
+.adapter-series-brand::before{content:"◈";font-size:16px;line-height:1}
+.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #a4a1f5;outline-offset:2px}
+dialog{color:var(--text);background:var(--card);border-color:var(--line)}
+::selection{background:#dad7ff;color:#262153}
+
+.brand small{letter-spacing:1.2px}

@@ -7,3 +7,13 @@ __pycache__/
 /plugin_data/
 /data/
 /work/
+
+data/
+plugin_data/
+private/
+.env
+*cookie*
+*credential*
+local_config.json
+*.db
+*.db-*

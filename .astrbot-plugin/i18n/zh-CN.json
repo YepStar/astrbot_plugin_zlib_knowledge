@@ -1,1 +1,7 @@
-{"pages": {"library": {"title": "书籍管理"}}}
+{
+  "pages": {
+    "library": {
+      "title": "书籍管理适配器"
+    }
+  }
+}

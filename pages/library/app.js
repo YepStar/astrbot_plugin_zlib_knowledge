@@ -63,5 +63,5 @@ $('settings-form').onsubmit=e=>{e.preventDefault();safe(async()=>{await api('POS
 for(const tab of document.querySelectorAll('.tab'))tab.onclick=()=>{for(const t of document.querySelectorAll('.tab'))t.classList.toggle('active',t===tab);for(const id of ['books','search','settings'])$(id).hidden=id!==tab.dataset.tab;};
 $('refresh').onclick=()=>safe(async()=>{await load();msg('已刷新书架和任务');});
 let polling=false;setInterval(()=>{if(!state||polling||(!previewJob&&!state.jobs.some(j=>['pending','running'].includes(j.status))))return;polling=true;safe(()=>load()).finally(()=>{polling=false;});},2500);
-safe(async()=>{if(!window.AstrBotPluginPage)throw Error('请从 AstrBot → 插件 → z-lib下载-导入知识库 → 书籍管理 打开');await window.AstrBotPluginPage.ready();await load(true);msg('书架已就绪；选择图书分析，或前往登录与设置。');});
+safe(async()=>{if(!window.AstrBotPluginPage)throw Error('请从 AstrBot → 插件 → 书籍管理适配器 → 书籍管理 打开');await window.AstrBotPluginPage.ready();await load(true);msg('书架已就绪；选择图书分析，或前往登录与设置。');});
 })();
