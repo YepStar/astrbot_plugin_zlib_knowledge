@@ -1,5 +1,5 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>书籍管理适配器 · YepStar</title><link rel="stylesheet" href="style.css?v=0.4.3"><link rel="stylesheet" href="series.css?v=0.4.3"></head><body>
-<div class="shell"><header><div><p class="adapter-series-brand">YEPSTAR · 适配器系列</p><h1>书籍管理适配器</h1><p>找书、保存，再把有用的正文放进知识库。</p></div><button id="refresh">刷新</button></header>
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>冷月系—Zlib知识库 · YepStar</title><link rel="stylesheet" href="style.css?v=0.4.3"><link rel="stylesheet" href="series.css?v=0.4.3"></head><body>
+<div class="shell"><header><div><p class="adapter-series-brand">YEPSTAR · 冷月系</p><h1>冷月系—Zlib知识库</h1><p>找书、保存，再把有用的正文放进知识库。</p></div><button id="refresh">刷新</button></header>
 <div id="notice" role="status" aria-live="polite">连接管理面板…</div>
 <nav aria-label="功能"><button class="tab active" data-tab="books">本地书架</button><button class="tab" data-tab="search">搜索图书</button><button class="tab" data-tab="settings">登录与设置</button></nav>
 <section id="books" class="panel"><div class="section-head"><div><h2>本地书架</h2><p id="directory"></p></div><span id="count" class="badge"></span></div><div class="hint">未导入在前，已导入在后。点击文件可分析章节与过滤结果，确认后才会入库。</div><div id="file-list" class="grid"></div><hr><h2>分析缓存与人工复核</h2><p class="hint">逐页识别结果、超时和失败原因会持久保存。关闭页面或重启后可从这里接续；失败页未经复核不能入库。</p><div id="analysis-cache-list" class="grid"></div></section>
