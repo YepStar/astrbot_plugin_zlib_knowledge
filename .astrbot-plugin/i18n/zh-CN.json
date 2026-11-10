@@ -1,7 +1,15 @@
 {
   "pages": {
     "library": {
-      "title": "书籍管理适配器"
+      "title": "（月）Zlib知识库"
+    }
+  },
+  "metadata": {
+    "display_name": "冷月系—Zlib知识库"
+  },
+  "views": {
+    "library": {
+      "title": "（月）Zlib知识库"
     }
   }
 }

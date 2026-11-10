@@ -1,5 +1,5 @@
 name: astrbot_plugin_zlib_knowledge
-display_name: 书籍管理适配器
+display_name: 冷月系—Zlib知识库
 desc: 官网浏览器登录自动保存会话、搜书下载、本地书架、只读历史、章节清洗导入与检索；兼容自然意图路由。
 version: 0.4.3
 author: YepStar

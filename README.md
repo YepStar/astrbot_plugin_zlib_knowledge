@@ -1,4 +1,4 @@
-# 书籍管理 0.4.3
+# 冷月系—Zlib知识库
 
 AstrBot 4.29.4 的电子书工作流。入口：插件 → z-lib下载-导入知识库 → 书籍管理。
 
@@ -81,3 +81,14 @@ E-API 端点与字段参考 [OMSociety/astrbot_plugin_zlibrary_assistant](https:
 ## 功能与本地配置分离
 
 功能实现、兼容处理和界面改动直接维护在本插件仓库。账号绑定、权限白名单、Provider ID、Cookie、Token及其他私人配置保留在AstrBot本地配置或plugin_data，不纳入源码发布。升级功能源码时保留已有本地配置与数据。
+
+
+## 冷月系插件
+
+本插件与下列插件均由 **YepStar** 创作和维护，属于同一作者的「冷月系」插件系列，各自独立安装并按需组合。
+
+- [冷月系—并行记忆分支](https://github.com/YepStar/astrbot_plugin_memory_branches)：独立记忆空间、总结节点回退与召回。
+- [冷月系—杂项/叠加层](https://github.com/YepStar/astrbot_plugin_misc_adapter)：可选小功能与市场插件叠加层（私有定制仓库）。
+- [冷月系—Zlib知识库](https://github.com/YepStar/astrbot_plugin_zlib_knowledge)：搜书、下载与知识库管理。
+- [冷月系—网易云音乐](https://github.com/YepStar/astrbot_plugin_netease_browser)：歌曲搜索、分享与音乐互动。
+- [冷月系—自然意图分析](https://github.com/YepStar/astrbot_plugin_intent_bridge)：将自然语言转换成可执行的指令与工具调用，让“帮我找本书”“来一首歌”等表达直接触发已接入插件的能力，沿用各插件的权限和确认规则。
